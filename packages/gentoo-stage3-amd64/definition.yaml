@@ -1,6 +1,6 @@
 category: "gentoo"
 name: "stage3-amd64"
-version: "0.20201125"
+version: "0.20201125+1"
 labels:
   package.version: "20201125T214503Z"
   autobump.strategy: "custom"

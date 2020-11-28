@@ -4,7 +4,7 @@ package_dir: /gentoo
 prelude:
 - luet upgrade && luet install -y utils/tar utils/curl
 - mkdir -p /gentoo/collections/gentoo/
-- wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-systemd/stage3-amd64-systemd-${STAGE_VERSION}.tar.xz -o /gentoo/collections/gentoo/stage3.tar.xz
+- curl -L http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-systemd/stage3-amd64-systemd-${STAGE_VERSION}.tar.xz -o /gentoo/collections/gentoo/stage3.tar.xz
 env:
 - LUET_YES=true
 - STAGE_VERSION={{ ( index .Values.labels "package.version" ) }}
