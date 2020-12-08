@@ -1,0 +1,10 @@
+image: "quay.io/mocaccino/extra:latest"
+
+package_dir: /funtoo
+prelude:
+- luet upgrade && luet install -y utils/tar utils/curl
+- mkdir -p /funtoo/collections/funtoo/
+- curl -L https://cdn-pull.funtoo.org/1.4-release-std/x86-64bit/generic_64/${STAGE_VERSION}/stage3-generic_64-1.4-release-std-${STAGE_VERSION}.tar.xz  -o /funtoo/collections/funtoo/stage3.tar.xz
+env:
+- LUET_YES=true
+- STAGE_VERSION={{ ( index .Values.labels "package.version" ) }}
