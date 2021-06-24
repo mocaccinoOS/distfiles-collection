@@ -1,5 +1,5 @@
 category: "funtoo-1.4"
 name: "stage3-amd64"
-version: "0.20201126"
+version: "0.20210621"
 labels:
-  package.version: "2020-11-26"
+  package.version: "2020-06-21"
