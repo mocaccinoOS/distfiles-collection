@@ -30,7 +30,7 @@ jobs:
       run: |
         curl https://get.mocaccino.org/luet/get_luet_root.sh | sudo sh
         sudo luet install -y repository/mocaccino-extra-stable
-        sudo luet install -y system/luet-extensions system/luet-devkit utils/jq net-fs/minio-client container/kubectl
+        sudo luet install -y system/luet-extensions system/luet-devkit utils/jq net-fs/minio-client container/kubectl --force
     - name: Build repository 🔧
       run: |
         export KUBECONFIG=$GITHUB_WORKSPACE/kubeconfig
